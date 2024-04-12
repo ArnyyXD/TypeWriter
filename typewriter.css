@@ -1,0 +1,326 @@
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  font-size: 16px; /* Adjust as needed */
+  background-image: repeating-linear-gradient(-90deg, rgb(57, 57, 132), rgb(163, 211, 247) 10px, rgb(60, 79, 123) 10px, rgb(163, 211, 247) 20px);
+  background-color: rgb(102, 102, 248);
+  background-blend-mode: screen;
+  width: 100%;
+}
+
+.container {
+  max-width: 100%; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 0 20px; /* Adjust padding as needed */
+}
+
+
+.typewriter {
+  margin:  30px auto; /* Center the element horizontally */
+  width: 80%; /* Set the width to 80% of the container */
+  max-width: 570px; /* Limit the maximum width */
+  padding: 25px;
+  min-height: 590px; /* Adjust the minimum height */
+  border-radius: 5px;
+  white-space: pre-wrap; /* Allow text to wrap */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.516);
+  cursor: text;
+  background-color: rgb(255, 255, 255);
+  right: 220px;
+  caret-color: transparent;
+  word-wrap: break-word;
+}
+
+.typewriter-container {
+  position: relative;
+  margin-top: -30px; /* Offset the container to align with the black line */
+}
+
+.typewriter-content {
+  position: relative;
+  top: 30px; /* Offset the content to align with the black line */
+}
+
+.cursor {
+  display: inline-block;
+  width: 1.6px;
+  height: 1.2em;
+  background-color: rgb(59, 59, 59);
+  animation: blink-animation 0.6s infinite step-start;
+  bottom:12px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: flex-end; /* Align buttons to the right */
+  gap: 20px; /* Adjust the gap between buttons */
+  padding-top: 10px; /* Add some space from the top */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.typewriter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(transparent, transparent 24px, #ccc 25px, #ccc 26px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.typewriter:focus {
+  outline: none;
+}
+
+/* Hide the default blinking cursor in the typewriter */
+.typewriter::after {
+  content: ''; /* Empty content */
+  position: absolute;
+  width: 2px; /* Adjust width as needed */
+  height: 1.5em; /* Adjust height as needed */
+  background-color: transparent; /* Set background color to transparent */
+  animation: none; /* Disable any blinking animation */
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #fa7743 0%, #f78965 80%, #fbc5ac 100%);
+  border-radius: 30px;
+  border: 1px solid #515252;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #474747;
+  text-shadow: 0 1px #9e9d9d;
+  margin-right: 3vw; /* Adjust margin relative to viewport width */
+  margin-bottom: 0vw; /* Adjust margin relative to viewport width */
+}
+
+button :hover {
+  box-shadow: 0 4px 3px 1px #f4ab95, 0 6px 8px #ce907f, 0 -4px 4px  #e1866d, 0 -6px 4px  #e17b5e, inset 0 0 3px 3px #f7e4de;
+}
+
+button:active {
+  box-shadow: 0 4px 3px 1px #eed79e, 0 6px 8px #e3d293, 0 -4px 4px #c8a870, 0 -6px 4px #d2ad82, inset 0 0 3px 3px #eeb06e;
+}
+
+button :focus {
+  box-shadow: 0 4px 3px 1px #eed79e, 0 6px 8px #e3d293, 0 -4px 4px #c8a870, 0 -6px 4px #d2ad82, inset 0 0 3px 3px #eeb06e;
+}
+
+/* Hide the default blinking cursor in the typewriter */
+@keyframes blink-animation {
+  0%, 50% {
+    opacity: 1; /* Set opacity to 0 to hide the cursor */
+  }
+  51%, 100% {
+    opacity: 0; /* Set opacity back to 0.75 for visibility */
+  }
+}
+
+/* Add styling for the vertical menu bar */
+.vertical-menu1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 190px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(203, 229, 254) 0%, rgb(155, 201, 248) 20%, rgb(96, 174, 252) 50%, rgb(68, 149, 230) 70%,rgb(27, 123, 219) 100%);
+  overflow-y: auto;
+  z-index: 999;
+  display: none; /* Hide the menu by default */
+}
+
+.vertical-menu1 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.vertical-menu1 ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.vertical-menu1 ul li:hover {
+  background-color: white;
+}
+
+/* Style for the custom color picker */
+#customColorPicker {
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Styles for large devices (e.g., desktops) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; /* Adjust max-width for larger screens */
+  }
+
+  .buttons-container {
+    flex-direction: row; /* Align buttons horizontally */
+    justify-content: flex-end; /* Align buttons to the right */
+  }
+
+  .horizontal-menu {
+    width: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: row;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #ffffff5f;
+    padding: 20px;
+    z-index: 999;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+  }
+  
+  .horizontal-menu a {
+    display: block;
+    padding: 20px; /* Adjust vertical padding */
+    margin: 0 20px; /* Adjust horizontal margin */
+    text-decoration: none;
+    color: #6b6a6a;
+  }
+  
+  .horizontal-menu a:hover {
+    color: black;
+  }
+
+  #customColorPicker {
+    position: absolute;
+    top: calc(0% + 20px); /* Place it below the Background color button */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+}
+}
+
+/* Styles for small devices (e.g., smartphones) */
+@media (max-width: 576px) {
+
+  .buttons-container {
+    align-items: flex-end; /* Align buttons to the right */
+  }
+
+  .vertical-menu {
+    top: 90px; /* Adjust top position to avoid overlap with typewriter */
+  }
+
+  .horizontal-menu {
+    width: 30% ; /* Adjust width as needed */
+    padding: auto ;
+    background-color: #ffffff64; /* Set background color */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+  }
+  
+  .horizontal-menu a {
+    padding: 10px 20px; /* Adjust padding */
+    margin: 0; /* Remove horizontal margin */
+    text-align: center; /* Center align menu items */
+    color: #6b6a6a;
+  }
+  
+  .horizontal-menu a:hover {
+    color: black;
+  }
+
+  #customColorPicker {
+    position: absolute;
+    top: calc(100% + -115px); /* Place it below the Background color button */
+    right: calc(50% + -10px); /* Adjust position to the left */
+    transform: translateX(-50%); /* Center it horizontally */
+  }
+  
+}
+
+.vertical-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 190px;
+  height: 80%;
+  background: linear-gradient(to bottom, 
+    rgb(56, 56, 56) 0%,        /* Dark Grey */
+    rgb(255, 255, 255) 10%,    /* White */
+    rgb(139, 139, 139) 20%,    /* Grey */
+    rgb(74, 161, 248) 30%,     /* Blue */
+    rgb(154, 67, 191) 40%,     /* Purple */
+    rgb(250, 115, 210) 50%,    /* Pink */
+    rgb(255, 153, 85) 60%,     /* Orange */
+    rgb(255, 255, 102) 70%,    /* Yellow */
+    rgb(106, 168, 79) 80%,     /* Green */
+    rgb(204, 0, 0) 90%,        /* Darker Red */
+    rgb(251, 10, 62) 100%      /* Red */
+  );
+  overflow-y: auto;
+  z-index: 999;
+  display: none; /* Hide the menu by default */
+}
+
+
+.vertical-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.vertical-menu ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.vertical-menu ul li:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Style for the download options dropdown */
+.download-options {
+  position: fixed;
+  top: 520px; /* Adjust as needed */
+  right: 580px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 150px; /* Adjust as needed */
+  overflow-y: auto;
+  display: none;
+}
+
+.download-options.show {
+  display: block;
+}
+
+.download-options ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.download-options ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.download-options ul li:hover {
+  background-color: #f2f2f2;
+}

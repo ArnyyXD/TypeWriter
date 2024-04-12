@@ -1,0 +1,96 @@
+body {
+    font-family: 'Bison', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #52ceff 0%, #8ccce5 25%, #a6e6ff 65%, #fee36d 100%);
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #a2c8f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.59);
+}
+
+h1 {
+    text-align: center;
+    font-size: 20px; /* Adjust the font size as needed */
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 12px; /* Adjust the font size as needed */
+}
+
+/* Media queries for different screen sizes */
+@media (min-width: 576px) {
+    /* Styles for small devices (e.g., phones) */
+    .container {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 3vw; /* Responsive font size */
+    }
+
+    p {
+        font-size: 2vw; /* Responsive font size */
+        margin-bottom: 1.5vw; /* Responsive margin */
+    }
+}
+
+@media (min-width: 768px) {
+    /* Styles for medium devices (e.g., tablets) */
+    .container {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 4vw; /* Responsive font size */
+    }
+
+    p {
+        font-size: 2.5vw; /* Responsive font size */
+        margin-bottom: 1.5vw; /* Responsive margin */
+    }
+}
+
+@media (min-width: 992px) {
+    /* Styles for large devices (e.g., desktops) */
+    .container {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 2.0vw; /* Responsive font size */
+    }
+
+    p {
+        font-size: 1.0vw; /* Responsive font size */
+        margin-bottom: 1vw; /* Responsive margin */
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Styles for iPad Pro */
+    body {
+        background: linear-gradient(to bottom, #52ceff 0%, #8ccce5 25%, #a6e6ff 65%, #fee36d 100%);
+    }
+
+    .container {
+        width: 70%; /* Adjust width as needed */
+    }
+
+    h1 {
+        font-size: 2.5vw; /* Responsive font size */
+    }
+
+    p {
+        font-size: 1.5vw; /* Responsive font size */
+        margin-bottom: 1vw; /* Responsive margin */
+    }
+}
